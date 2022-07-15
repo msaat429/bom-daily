@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:gravity="center_horizontal">
+            <TextView
+                android:gravity="center_horizontal"
+                android:id="@+id/day"
+                android:layout_below="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="Today:"
+                android:textSize="50sp"
+                tools:ignore="MissingConstraints" />
+        </TableRow>
+
+        <TableRow
+            android:gravity="center_horizontal">
+            <TextView
+                android:gravity="center_horizontal"
+                android:id="@+id/verse"
+                android:layout_below="@+id/day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="75dp"
+                android:text="Verse"
+                android:textStyle="bold"
+                android:typeface="serif"
+                android:textSize="30sp"
+                tools:ignore="MissingConstraints" />
+        </TableRow>
+
+        <TableRow
+            android:gravity="center_horizontal">
+            <TextView
+                android:gravity="center"
+                android:id="@+id/text"
+                android:layout_below="@+id/verse"
+                android:layout_width="350dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="20dp"
+                android:text="text"
+                android:typeface="serif"
+                android:singleLine="false"
+                android:textSize="20sp"
+                tools:ignore="MissingConstraints" />
+        </TableRow>
+
+        <TableRow
+            android:gravity="center_horizontal">
+            <Button
+                android:gravity="center_horizontal"
+                android:id="@+id/change_day"
+                android:layout_below="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="match_parent"
+                android:text="Change Date"
+                android:textSize="30sp"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/blue"
+                tools:ignore="MissingConstraints" />
+        </TableRow>
+
+    </TableLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
