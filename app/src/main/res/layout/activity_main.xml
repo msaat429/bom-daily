@@ -32,7 +32,7 @@
                 android:layout_below="@+id/day"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="75dp"
+                android:layout_marginTop="30dp"
                 android:text="Verse"
                 android:textStyle="bold"
                 android:typeface="serif"
@@ -47,12 +47,12 @@
                 android:id="@+id/text"
                 android:layout_below="@+id/verse"
                 android:layout_width="350dp"
-                android:layout_height="300dp"
+                android:layout_height="350dp"
                 android:layout_marginTop="20dp"
                 android:text="text"
                 android:typeface="serif"
                 android:singleLine="false"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 tools:ignore="MissingConstraints" />
         </TableRow>
 

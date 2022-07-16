@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         verse = findViewById(R.id.verse);
         text = findViewById(R.id.text);
 
-        scripture = verses.getScripture(month, date.getDayOfMonth());
+        scripture = verses.getScripture(month-1, date.getDayOfMonth());
         verse.setText(scripture[0]);
         text.setText(scripture[1]);
 
