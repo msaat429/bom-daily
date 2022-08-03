@@ -4,8 +4,27 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/msaat/AndroidStudioProjects/BookofMormonDaily/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.19282051282051282" />
+        <entry key="..\:/Users/msaat/AndroidStudioProjects/BookofMormonDaily/app/src/main/res/drawable/ic_date.xml" value="0.15864978902953586" />
         <entry key="..\:/Users/msaat/AndroidStudioProjects/BookofMormonDaily/app/src/main/res/drawable/ic_launcher_background.xml" value="0.19583333333333333" />
+        <entry key="..\:/Users/msaat/AndroidStudioProjects/BookofMormonDaily/app/src/main/res/drawable/ic_menu.xml" value="0.15864978902953586" />
+        <entry key="..\:/Users/msaat/AndroidStudioProjects/BookofMormonDaily/app/src/main/res/drawable/ic_menu_camera.xml" value="0.15864978902953586" />
+        <entry key="..\:/Users/msaat/AndroidStudioProjects/BookofMormonDaily/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.15864978902953586" />
+        <entry key="..\:/Users/msaat/AndroidStudioProjects/BookofMormonDaily/app/src/main/res/drawable/side_nav_bar.xml" value="0.15864978902953586" />
         <entry key="..\:/Users/msaat/AndroidStudioProjects/BookofMormonDaily/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/msaat/AndroidStudioProjects/BookofMormonDaily/app/src/main/res/layout/activity_main2.xml" value="0.14743589743589744" />
+        <entry key="..\:/Users/msaat/AndroidStudioProjects/BookofMormonDaily/app/src/main/res/layout/content_main2.xml" value="0.14743589743589744" />
+        <entry key="..\:/Users/msaat/AndroidStudioProjects/BookofMormonDaily/app/src/main/res/layout/feedback.xml" value="0.13632246376811594" />
+        <entry key="..\:/Users/msaat/AndroidStudioProjects/BookofMormonDaily/app/src/main/res/layout/fragment_gallery.xml" value="0.14743589743589744" />
+        <entry key="..\:/Users/msaat/AndroidStudioProjects/BookofMormonDaily/app/src/main/res/layout/fragment_home.xml" value="0.14743589743589744" />
+        <entry key="..\:/Users/msaat/AndroidStudioProjects/BookofMormonDaily/app/src/main/res/layout/fragment_slideshow.xml" value="0.14743589743589744" />
+        <entry key="..\:/Users/msaat/AndroidStudioProjects/BookofMormonDaily/app/src/main/res/layout/headerfile.xml" value="0.14743589743589744" />
+        <entry key="..\:/Users/msaat/AndroidStudioProjects/BookofMormonDaily/app/src/main/res/layout/nav_header_main2.xml" value="0.14743589743589744" />
+        <entry key="..\:/Users/msaat/AndroidStudioProjects/BookofMormonDaily/app/src/main/res/layout/navheader.xml" value="0.14743589743589744" />
+        <entry key="..\:/Users/msaat/AndroidStudioProjects/BookofMormonDaily/app/src/main/res/layout/navigation.xml" value="0.14583333333333334" />
+        <entry key="..\:/Users/msaat/AndroidStudioProjects/BookofMormonDaily/app/src/main/res/menu/activity_main_drawer.xml" value="0.14743589743589744" />
+        <entry key="..\:/Users/msaat/AndroidStudioProjects/BookofMormonDaily/app/src/main/res/menu/main_activity2.xml" value="0.14743589743589744" />
+        <entry key="..\:/Users/msaat/AndroidStudioProjects/BookofMormonDaily/app/src/main/res/menu/navigation_drawer.xml" value="0.14743589743589744" />
+        <entry key="..\:/Users/msaat/AndroidStudioProjects/BookofMormonDaily/app/src/main/res/menu/top_app_bar.xml" value="0.14743589743589744" />
       </map>
     </option>
   </component>

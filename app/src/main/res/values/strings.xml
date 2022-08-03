@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Book of Mormon Daily</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="longest">Wherefore, my beloved brethren, I know that if ye shall follow the Son, with full purpose of heart, acting no hypocrisy and no deception before God, but with real intent, repenting of your sins, witnessing unto the Father that ye are willing to take upon you the name of Christ, by baptism—yea, by following your Lord and your Savior down into the water, according to his word, behold, then shall ye receive the Holy Ghost; yea, then cometh the baptism of fire and of the Holy Ghost; and then can ye speak with the tongue of angels, and shout praises unto the Holy One of Israel.</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
 </resources>
