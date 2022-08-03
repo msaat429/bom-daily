@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/join_game_layout"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:paddingLeft="15dp"
+    android:backgroundTint="@color/gray"
+    android:paddingRight="15dp"
+    android:background="@drawable/shape"
+    android:layout_width="wrap_content">
+
+
+    <TableRow
+        android:gravity="center_horizontal">
+
+        <EditText
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/feedback_text"
+            android:hint="Give Feedback"
+            android:paddingTop="2dp"
+            android:maxLength="500"
+            android:gravity="top|left"
+            android:layout_weight="1"
+            android:paddingStart="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="250dp"
+            android:inputType="text|textMultiLine"
+            android:background="@drawable/shape"
+            />
+
+    </TableRow>
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <TableRow
+
+            android:layout_height="100dp"
+            android:layout_width="350dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/cancel"
+                android:text="Cancel"
+                android:textSize="30dp"
+                android:textColor="@color/white"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_width="150dp"
+                />
+
+            <Button
+                android:id="@+id/submit"
+                android:text="Submit"
+                android:textSize="30dp"
+                android:textColor="@color/white"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_width="150dp"
+                />
+
+        </TableRow>
+
+    </LinearLayout>
+
+</TableLayout>
