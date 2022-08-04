@@ -22,6 +22,7 @@
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/AppBar"
             tools:ignore="MissingConstraints">
 
             <com.google.android.material.appbar.MaterialToolbar
@@ -37,6 +38,7 @@
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
                     android:layout_gravity="right"
+                    android:enabled="true"
                     android:contentDescription="Change the Date of the Daily Verse"
                     android:layout_marginRight="10dp"
                     android:background="@drawable/ic_feedback_24" />
@@ -55,6 +57,11 @@
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        tools:ignore="MissingConstraints">
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -66,7 +73,7 @@
                 android:id="@+id/day"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="75dp"
+                android:layout_marginTop="30dp"
                 android:text="Today:"
                 android:typeface="serif"
                 android:textStyle="bold"
@@ -82,7 +89,7 @@
                 android:id="@+id/verse"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="20dp"
                 android:text="Verse"
                 android:textStyle="bold"
                 android:typeface="serif"
@@ -90,8 +97,26 @@
                 tools:ignore="MissingConstraints" />
         </TableRow>
 
-    </TableLayout>
+        <TableRow>
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="25dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:scrollbars = "vertical"
+                android:text="@string/longest"
+                android:textSize="20sp"
+                android:lineSpacingExtra="2dp"
+                android:justificationMode="inter_word"
+                android:typeface="serif"
+                android:singleLine="false"
+                tools:ignore="MissingConstraints" />
+        </TableRow>
 
+    </TableLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.navigation.NavigationView
@@ -103,21 +128,6 @@
         android:fitsSystemWindows="true"
         app:menu="@menu/navigation_drawer"/>
 
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        android:paddingBottom="80dp"
-        android:paddingTop="230dp"
-        android:text="@string/longest"
-        android:textSize="21dp"
-        android:lineSpacingExtra="2dp"
-        android:justificationMode="inter_word"
-        android:typeface="serif"
-        android:singleLine="false"
-        tools:ignore="MissingConstraints" />
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
     android:layout_width="match_parent"
@@ -128,6 +138,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
+
         android:layout_margin="16dp"
         android:contentDescription="Change Date"
         app:srcCompat="@drawable/ic_date"/>

@@ -5,15 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
-import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
+import android.graphics.text.LineBreaker;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.text.method.ScrollingMovementMethod;
 import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.PopupWindow;
@@ -22,7 +23,6 @@ import android.widget.Toast;
 
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -38,15 +38,11 @@ public class MainActivity extends AppCompatActivity {
     private TextView day;
     private TextView verse;
     private TextView text;
-    private Button button;
-    int month;
     int dayofmonth;
     LocalDate date;
     ImageButton imageButton;
 
     DatePickerDialog DateDialog;
-
-    private FirebaseAuth auth;
 
     DatabaseReference databaseReference;
 
@@ -57,16 +53,13 @@ public class MainActivity extends AppCompatActivity {
             "November", "December"};
 
 
-    @SuppressLint("WrongConstant")
+    @SuppressLint({"WrongConstant", "SetTextI18n"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        auth = FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance("https://bomdaily-b0aea-default-rtdb.firebaseio.com/").getReference();
-
 
         day = findViewById(R.id.day);
         date = LocalDate.now();
@@ -88,31 +81,25 @@ public class MainActivity extends AppCompatActivity {
         dayofmonth = ld.getDayOfMonth();
         final int[] finalMonth = {month};
         FloatingActionButton fab = findViewById(R.id.floating_action_button);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                DateDialog = new DatePickerDialog(MainActivity.this,
-                        new DatePickerDialog.OnDateSetListener() {
-                            @Override
-                            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                                day.setText(MONTHS[month] + " " + dayOfMonth);
-                                String[] scripture;
-                                scripture = verses.getScripture(month,dayOfMonth);
-                                verse.setText(scripture[0]);
-                                text.setText(scripture[1]);
-                                finalMonth[0] = month;
-                                dayofmonth = dayOfMonth;
-                            }
-                        }, 2022, finalMonth[0], dayofmonth);
-                DateDialog.show();
-            }
+        fab.setOnClickListener(view -> {
+            DateDialog = new DatePickerDialog(MainActivity.this,
+                    (view1, year, month1, dayOfMonth) -> {
+                        day.setText(MONTHS[month1] + " " + dayOfMonth);
+                        String[] scripture1;
+                        scripture1 = verses.getScripture(month1,dayOfMonth);
+                        verse.setText(scripture1[0]);
+                        text.setText(scripture1[1]);
+                        finalMonth[0] = month1;
+                        dayofmonth = dayOfMonth;
+                    }, 2022, finalMonth[0], dayofmonth);
+            DateDialog.show();
         });
 
         imageButton = findViewById(R.id.feedbackButton);
 
 
         imageButton.setOnClickListener(v ->{
-            View popupView = getLayoutInflater().inflate(R.layout.feedback, null);
+            @SuppressLint("InflateParams") View popupView = getLayoutInflater().inflate(R.layout.feedback, null);
 
             EditText feedback = popupView.findViewById(R.id.feedback_text);
             Button submit;
@@ -152,9 +139,9 @@ public class MainActivity extends AppCompatActivity {
 
 
             });
-            cancel.setOnClickListener(w ->{
-                popupWindow.dismiss();
-            });
+            cancel.setOnClickListener(w -> popupWindow.dismiss());
         });
+
+
     }
 }
